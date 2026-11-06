@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cova Rasa: Necromante · trailer</title>
+<meta name="description" content="Você morreu da peste. E voltou. Atrás de uma máscara de bico, finja ser o médico da vila: cure os vivos, use os mortos e descubra que crime trouxe a peste a Brumafria.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cova Rasa: Necromante">
+<meta property="og:description" content="Você morreu da peste. E voltou. Atrás de uma máscara de bico, finja ser o médico da vila: cure os vivos, use os mortos e descubra que crime trouxe a peste a Brumafria.">
+<meta property="og:image" content="https://lucasaveloso.github.io/cova-rasa/trailer/capa_pt.jpg">
+<meta property="og:url" content="https://lucasaveloso.github.io/cova-rasa/trailer/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../index.icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: a madeira escura e o pergaminho da interface do jogo; o trailer (o narrado, de terror antigo) no alto, o jogo em quatro frases e as fotos. */
+:root {
+  --madeira: #1d130d;
+  --madeira-2: #2a1b12;
+  --pergaminho: #f4e6c8;
+  --borda: #c9a77a;
+  --tinta: #2f2118;
+  --tinta-suave: #6b5442;
+  --osso: #efe0bf;
+  --ouro: #e0b25a;
+  --brasa: #b8542e;
+  --display: "Alegreya", Georgia, "Times New Roman", serif;
+  --corpo: "Nunito", "Segoe UI", system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--madeira); scroll-behavior: smooth; }
+body {
+  margin: 0; color: var(--osso); font: 400 17px/1.6 var(--corpo);
+  background:
+    radial-gradient(1200px 500px at 50% -120px, rgba(224, 178, 90, .16), transparent 70%),
+    repeating-linear-gradient(90deg, transparent 0 46px, rgba(0,0,0,.14) 46px 48px, transparent 48px 94px),
+    linear-gradient(180deg, var(--madeira-2), var(--madeira));
+}
+html[data-lang="pt"] .en, html[data-lang="en"] .pt { display: none !important; }
+.largura { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--ouro); }
+a:focus-visible, button:focus-visible { outline: 3px solid #fff1c9; outline-offset: 3px; }
+
+header.topo { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 18px; padding-bottom: 6px; }
+.marca { font: 800 15px/1 var(--corpo); letter-spacing: .14em; text-transform: uppercase; color: var(--ouro); }
+.idiomas { display: flex; gap: 6px; }
+.idiomas button {
+  font: 800 13px/1 var(--corpo); letter-spacing: .06em; color: var(--osso); background: transparent;
+  border: 1px solid rgba(224, 178, 90, .45); border-radius: 4px; padding: 7px 10px; cursor: pointer;
+}
+.idiomas button[aria-pressed="true"] { background: var(--ouro); color: var(--tinta); border-color: var(--ouro); }
+
+.abertura { display: grid; gap: 18px; padding-top: 18px; padding-bottom: 34px; }
+.abertura, .bloco, section.folha { grid-template-columns: minmax(0, 1fr); }
+.abertura > *, .bloco > *, section.folha > * { min-width: 0; }
+.abertura h1 { margin: 0; font: 800 clamp(36px, 7vw, 64px)/1.02 var(--display); color: #fbefd6; text-wrap: balance; }
+.abertura .frase { margin: 0; max-width: 60ch; font-size: 18.5px; color: #eadbb9; }
+.moldura {
+  border: 3px solid var(--borda); border-radius: 6px; background: #000;
+  box-shadow: 0 0 0 3px #4a2f1d, 0 18px 40px rgba(0,0,0,.55); overflow: hidden;
+}
+.moldura video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
+.acoes { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.botao {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font: 800 16px/1 var(--corpo);
+  padding: 13px 18px; border-radius: 5px; border: 2px solid #8a5f2a;
+}
+.botao.cheio { background: var(--ouro); color: var(--tinta); }
+.botao.cheio:hover { background: #f0c874; }
+.botao.vazio { color: var(--osso); border-color: rgba(224, 178, 90, .55); }
+.botao.vazio:hover { background: rgba(224, 178, 90, .12); }
+.nota { font-size: 14px; color: #c8b08a; margin: 0; max-width: 62ch; }
+
+section.folha {
+  background: var(--pergaminho); color: var(--tinta); border: 3px solid var(--borda); border-radius: 6px;
+  box-shadow: 0 0 0 3px #4a2f1d, 0 12px 28px rgba(0,0,0,.45); padding: 26px 26px 22px; display: grid; gap: 18px;
+}
+section.folha h2 { margin: 0; font: 800 28px/1.15 var(--display); text-wrap: balance; }
+.pilares { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px 22px; }
+.pilares h3 { margin: 0 0 4px; font: 800 19px/1.25 var(--display); color: var(--brasa); text-wrap: balance; }
+.pilares p { margin: 0; color: #3d2c20; font-size: 16px; }
+
+.bloco { display: grid; gap: 16px; padding-top: 38px; }
+.bloco > h2 { margin: 0; font: 800 28px/1.15 var(--display); color: #fbefd6; }
+.bloco > p { margin: 0; max-width: 62ch; color: #e0cfac; }
+.fotos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.fotos figure { margin: 0; display: grid; gap: 6px; }
+.fotos a { display: block; border: 2px solid var(--borda); border-radius: 4px; overflow: hidden; background: #000; }
+.fotos img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.fotos figcaption { font-size: 14px; color: #d8c49e; }
+
+ul.lista { margin: 0; padding-left: 20px; display: grid; gap: 6px; max-width: 70ch; color: #e8d8b6; }
+footer { padding: 40px 16px 48px; color: #b49c78; font-size: 13.5px; display: grid; gap: 8px; max-width: 1040px; margin: 0 auto; }
+footer p { margin: 0; max-width: 90ch; }
+
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  section.folha { padding: 20px 16px 18px; }
+  .abertura .frase { font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="topo largura">
+  <span class="marca"><span class="pt">Cova Rasa: Necromante</span><span class="en">Cova Rasa: Necromancer</span></span>
+  <div class="idiomas" role="group" aria-label="Idioma / Language">
+    <button type="button" id="b-pt" data-l="pt" aria-pressed="true">PT</button>
+    <button type="button" id="b-en" data-l="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<main>
+  <div class="abertura largura">
+    <h1><span class="pt">Você morreu da peste. E voltou.</span><span class="en">You died of the plague. And came back.</span></h1>
+    <p class="frase pt">Atrás de uma máscara de bico forrada com a pele de um morto, finja ser o médico da vila: diagnostique doentes, cure os vivos, use os mortos e descubra que crime trouxe a peste a Brumafria, antes que alguém veja o seu rosto.</p>
+    <p class="frase en">Behind a beaked mask lined with a dead man's skin, pose as the village doctor: diagnose the sick, heal the living, use the dead and uncover the crime that brought the plague to Brumafria, before anyone sees your face.</p>
+    <div class="moldura pt"><video controls playsinline preload="metadata" poster="capa_pt.jpg" src="trailer.mp4" aria-label="Trailer do jogo, 1 minuto e 31 segundos"></video></div>
+    <div class="moldura en"><video controls playsinline preload="none" poster="capa_en.jpg" src="trailer.mp4" aria-label="Game trailer, 1 minute 31 seconds, narrated in Portuguese"></video></div>
+    <p class="nota en">The trailer is narrated in Portuguese, in the style of an old horror movie.</p>
+    <div class="acoes">
+      <a class="botao cheio" href="../"><span class="pt">Jogar no navegador</span><span class="en">Play in the browser</span></a>
+    </div>
+    <p class="nota pt">A versão do navegador roda melhor no computador. No iPhone, abra no Safari e use Compartilhar › Adicionar à Tela de Início para jogar em tela cheia.</p>
+    <p class="nota en">The browser version runs best on a computer. On iPhone, open it in Safari and use Share › Add to Home Screen to play full screen.</p>
+  </div>
+
+  <div class="largura">
+    <section class="folha" aria-labelledby="t-jogo">
+      <h2 id="t-jogo"><span class="pt">Um médico da peste que já está morto</span><span class="en">A plague doctor who is already dead</span></h2>
+      <div class="pilares">
+        <div>
+          <h3><span class="pt">A casa de saúde</span><span class="en">The infirmary</span></h3>
+          <p class="pt">Todas as manhãs o barqueiro traz doentes pelo rio. Junte os sintomas, acerte entre 22 doenças e trate com o remédio certo. Quem morre vai para o necrotério, e a necromancia agradece.</p>
+          <p class="en">Every morning the boatman brings the sick down the river. Gather the symptoms, pick the right one among 22 diseases and treat it with the right remedy. Those who die go to the morgue, and necromancy is grateful.</p>
+        </div>
+        <div>
+          <h3><span class="pt">O disfarce apodrece</span><span class="en">The disguise rots</span></h3>
+          <p class="pt">A máscara é feita com a pele dos mortos e apodrece com o tempo. Cheirando mal, a vila desconfia; sem ela, os vivos veem o rosto e os guardas vêm.</p>
+          <p class="en">The mask is made from the skin of the dead and rots over time. When it stinks, the village grows suspicious; without it, the living see your face and the guards come.</p>
+        </div>
+        <div>
+          <h3><span class="pt">Os mortos trabalham</span><span class="en">The dead do the work</span></h3>
+          <p class="pt">Faça autópsias, erga zumbis que cortam lenha, aram a terra e carregam corpos. Cuide do cemitério, plante na várzea e amplie a casa de saúde até o Hospital de São Roque.</p>
+          <p class="en">Perform autopsies, raise zombies that chop wood, till the soil and haul bodies. Tend the cemetery, farm the meadow and grow the infirmary into the Hospital of Saint Roch.</p>
+        </div>
+        <div>
+          <h3><span class="pt">O seu próprio crime</span><span class="en">Your own crime</span></h3>
+          <p class="pt">Pó cinzento nos pulmões dos mortos, um sol negro nas portas. Cada pista leva ao Império além dos montes, e a você. No fim, a vila julga o seu último mês.</p>
+          <p class="en">Grey dust in the lungs of the dead, a black sun on the doors. Every clue leads to the Empire beyond the mountains, and to you. In the end, the village judges your last month.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="bloco" id="fotos">
+      <h2><span class="pt">Fotos do jogo</span><span class="en">Screenshots</span></h2>
+      <div class="fotos">
+        <figure><a href="casa_saude_pt.jpg" class="pt"><img src="casa_saude_pt.jpg" alt="A casa de saúde com os doentes nos leitos" loading="lazy" width="1280" height="720"></a><a href="casa_saude_en.jpg" class="en"><img src="casa_saude_en.jpg" alt="The infirmary with patients in their beds" loading="lazy" width="1280" height="720"></a>
+          <figcaption><span class="pt">A casa de saúde</span><span class="en">The infirmary</span></figcaption></figure>
+        <figure><a href="ficha_pt.jpg" class="pt"><img src="ficha_pt.jpg" alt="A ficha do doente, com sintomas e doenças possíveis" loading="lazy" width="1280" height="720"></a><a href="ficha_en.jpg" class="en"><img src="ficha_en.jpg" alt="The patient chart, with symptoms and possible diseases" loading="lazy" width="1280" height="720"></a>
+          <figcaption><span class="pt">O diagnóstico</span><span class="en">The diagnosis</span></figcaption></figure>
+        <figure><a href="vila_pt.jpg" class="pt"><img src="vila_pt.jpg" alt="A vila de Brumafria de dia" loading="lazy" width="1280" height="720"></a><a href="vila_en.jpg" class="en"><img src="vila_en.jpg" alt="The village of Brumafria by day" loading="lazy" width="1280" height="720"></a>
+          <figcaption><span class="pt">A vila de Brumafria</span><span class="en">The village of Brumafria</span></figcaption></figure>
+        <figure><a href="cemiterio_pt.jpg" class="pt"><img src="cemiterio_pt.jpg" alt="O cemitério com covas e lápides" loading="lazy" width="1280" height="720"></a><a href="cemiterio_en.jpg" class="en"><img src="cemiterio_en.jpg" alt="The cemetery with graves and headstones" loading="lazy" width="1280" height="720"></a>
+          <figcaption><span class="pt">O cemitério</span><span class="en">The cemetery</span></figcaption></figure>
+        <figure><a href="chefe_pt.jpg" class="pt"><img src="chefe_pt.jpg" alt="Luta contra um chefe" loading="lazy" width="1280" height="720"></a><a href="chefe_en.jpg" class="en"><img src="chefe_en.jpg" alt="A boss fight" loading="lazy" width="1280" height="720"></a>
+          <figcaption><span class="pt">Um dos 18 chefes</span><span class="en">One of the 18 bosses</span></figcaption></figure>
+        <figure><a href="arraial_festa_pt.jpg" class="pt"><img src="arraial_festa_pt.jpg" alt="Festa no arraial dos romeiros" loading="lazy" width="1280" height="720"></a><a href="arraial_festa_en.jpg" class="en"><img src="arraial_festa_en.jpg" alt="A festival at the pilgrims' camp" loading="lazy" width="1280" height="720"></a>
+          <figcaption><span class="pt">Domingo de festa no arraial</span><span class="en">Festival Sunday at the camp</span></figcaption></figure>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <h2><span class="pt">E ainda</span><span class="en">And also</span></h2>
+      <ul class="lista pt">
+        <li>Um vale vivo: a vila, o cemitério, o brejo, os montes, a Ribeira dos Moleiros e o Arraial dos Romeiros, aberto só aos domingos.</li>
+        <li>18 chefes e 11 monstros grandes, com partes que quebram e armas forjadas com elas.</li>
+        <li>Uma cripta que muda a cada visita e o Grande Mausoléu, sem fim.</li>
+        <li>Estações, festas, feiras de domingo e moradores com rotina.</li>
+        <li>Teclado e mouse ou controle, com teclas trocáveis e cores para daltonismo.</li>
+        <li>Em português, inglês, espanhol e francês.</li>
+      </ul>
+      <ul class="lista en">
+        <li>A living vale: the village, the cemetery, the marsh, the mountains, the Millers' Riverside and the Pilgrims' Camp, open only on Sundays.</li>
+        <li>18 bosses and 11 large monsters, with breakable parts and weapons forged from them.</li>
+        <li>A crypt that changes on every visit, and the endless Great Mausoleum.</li>
+        <li>Seasons, festivals, Sunday fairs and villagers with daily routines.</li>
+        <li>Keyboard and mouse or a controller, with remappable keys and colorblind colors.</li>
+        <li>In English, Portuguese, Spanish and French.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p class="pt">Cova Rasa: Necromante, versão 0.6.1. Em desenvolvimento, para Windows, Android e navegador.</p>
+  <p class="en">Cova Rasa: Necromancer, version 0.6.1. In development, for Windows, Android and the browser.</p>
+  <p><span class="pt">Música:</span><span class="en">Music:</span> "Village Consort", "Dark Times", "Moorland", "Gregorian Chant", "Ossuary 1 - A Beginning", "Five Armies" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 License, <a href="https://creativecommons.org/licenses/by/4.0/">creativecommons.org/licenses/by/4.0</a>. <span class="pt">Demais músicas e sons: autores do OpenGameArt e Kenney, domínio público (CC0).</span><span class="en">Other music and sounds: OpenGameArt authors and Kenney, public domain (CC0).</span></p>
+</footer>
+
+<script>
+(function () {
+  var raiz = document.documentElement;
+  function usar(l) {
+    raiz.setAttribute('data-lang', l);
+    raiz.setAttribute('lang', l === 'pt' ? 'pt-BR' : 'en');
+    document.title = l === 'pt' ? 'Cova Rasa: Necromante · trailer' : 'Cova Rasa: Necromancer · trailer';
+    ['pt', 'en'].forEach(function (x) { document.getElementById('b-' + x).setAttribute('aria-pressed', String(x === l)); });
+    // o vídeo da outra língua para de tocar quando some
+    document.querySelectorAll('html[data-lang="' + l + '"] .' + (l === 'pt' ? 'en' : 'pt') + ' video').forEach(function (v) { v.pause(); });
+  }
+  var h = location.hash.replace('#', '');
+  var nav = (navigator.language || 'pt').toLowerCase();
+  usar(h === 'en' || h === 'pt' ? h : (nav.indexOf('pt') === 0 ? 'pt' : 'en'));
+  document.querySelectorAll('.idiomas button').forEach(function (b) {
+    b.addEventListener('click', function () { usar(b.getAttribute('data-l')); });
+  });
+})();
+</script>
+</body>
+</html>
